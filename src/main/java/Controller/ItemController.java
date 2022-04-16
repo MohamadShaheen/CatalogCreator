@@ -1,16 +1,15 @@
 package Controller;
 
-import java.io.IOException;
-
 import Model.Flower;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import org.example.App;
 import org.example.MyListener;
+
+import java.util.Objects;
 
 public class ItemController {
 
@@ -31,7 +30,7 @@ public class ItemController {
     private MyListener myListener;
 
     @FXML
-    private void click(MouseEvent mouseEvent) {
+    private void click() {
         myListener.onClickListener(flower);
     }
 
@@ -40,7 +39,7 @@ public class ItemController {
         this.myListener = myListener;
         nameLabel.setText(flower.getName());
         priceLabel.setText(App.CURRENCY + flower.getPrice());
-        Image image = new Image(getClass().getResourceAsStream(flower.getImgSource()));
+        Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream(flower.getImgSource())));
         imageLabel.setImage(image);
         anItem.setStyle("-fx-background-color: #" + flower.getColor() + ";\n" +
                 "    -fx-background-radius: 30;" +
