@@ -1,13 +1,29 @@
 package Model;
 
+import javax.persistence.*;
+
+
+@Entity
+@Table(name = "flowers_list")
 public class Flower {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    @Column(name = "Image_Source")
     private String imgSource;
+    @Column(name = "Name")
     private String name;
+    @Column(name = "Price")
     private double price;
+    @Column(name = "Details")
     private String details;
+    @Column(name = "Size")
     private String size;
+    @Column(name = "Color")
     private String color;
+
+    public Flower() {}
 
     public Flower(String imgSource, String name, double price, String details, String size, String color) {
         this.imgSource = imgSource;
