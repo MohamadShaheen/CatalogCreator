@@ -118,7 +118,7 @@
                         </HBox>
                         <HBox prefHeight="102.0" prefWidth="335.0">
                            <children>
-                              <Label fx:id="chosenItemDetails" prefHeight="113.0" prefWidth="325.0" text="Arrangement of daisies, peruvian lilies,&#10;gerberas and chrysanthemums along with&#10;a vase" wrapText="true" textFill="WHITE" HBox.hgrow="ALWAYS">
+                              <Label fx:id="chosenItemDetails" prefHeight="113.0" prefWidth="325.0" text="Arrangement of daisies, peruvian lilies,&#10;gerberas and chrysanthemums along with&#10;a vase" textFill="WHITE" wrapText="true" HBox.hgrow="ALWAYS">
                                  <font>
                                     <Font name="Cambria" size="18.0" />
                                  </font>
