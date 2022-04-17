@@ -43,10 +43,13 @@
                               <Font name="Cambria" size="18.0" />
                            </font>
                         </TextField>
-                        <Button fx:id="searchButton" mnemonicParsing="false" onAction="#pressSearch" prefHeight="40.0" styleClass="button-request" stylesheets="@../../Styles/style.css" text="Search">
+                        <Button fx:id="searchButton" mnemonicParsing="false" onAction="#pressSearch" prefHeight="40.0" styleClass="button-search" stylesheets="@../../Styles/style.css" text="Search">
                            <HBox.margin>
                               <Insets bottom="10.0" left="10.0" top="10.0" />
                            </HBox.margin>
+                           <font>
+                              <Font name="Cambria Bold" size="12.0" />
+                           </font>
                         </Button>
                      </children>
                      <styleClass>
