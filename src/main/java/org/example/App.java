@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
@@ -12,14 +13,15 @@ import java.io.IOException;
 public class App extends Application {
 
     public static final String CURRENCY = "$";
+    public static double x, y;
 
     public static Scene scene;
 
     @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("Catalog"), 640, 640);
+        scene = new Scene(loadFXML("MainPage"));
+        stage.setTitle("Lailac");
         stage.setScene(scene);
-        stage.setTitle("Catalog");
         stage.show();
     }
 
