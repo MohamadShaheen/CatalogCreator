@@ -1,5 +1,6 @@
 package Controller;
 
+import java.awt.event.MouseEvent;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -34,8 +35,8 @@ public class MainPageController {
     private Pane pnlCustomer;
 
     @FXML
-    void SignUpHandle(ActionEvent event) {
-
+    void signUpHandle(ActionEvent event) throws IOException {
+        App.setRoot("SignUp");
     }
 
     @FXML
@@ -44,13 +45,18 @@ public class MainPageController {
     }
 
     @FXML
-    void contactUsHandle(ActionEvent event) {
-
+    void contactUsHandle(ActionEvent event) throws IOException {
+        App.setRoot("ContactUsNotSigned");
     }
 
     @FXML
-    void signInHandle(ActionEvent event) {
+    void handleExitMainPage(ActionEvent event) {
+        System.exit(0);
+    }
 
+    @FXML
+    void signInHandle(ActionEvent event) throws IOException {
+        App.setRoot("SignIn");
     }
 
     @FXML

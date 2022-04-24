@@ -13,13 +13,13 @@ import java.io.IOException;
 public class App extends Application {
 
     public static final String CURRENCY = "$";
-    public static double x, y;
 
     public static Scene scene;
 
     @Override
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("MainPage"));
+        stage.initStyle(StageStyle.UNDECORATED);
         stage.setTitle("Lailac");
         stage.setScene(scene);
         stage.show();

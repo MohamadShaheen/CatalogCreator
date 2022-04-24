@@ -1,6 +1,7 @@
 package Controller;
 
 import Model.Flower;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -9,6 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Region;
@@ -59,6 +61,16 @@ public class CatalogController implements Initializable {
     private final List<Flower> flowerList = new ArrayList<>();
 
     private MyListener myListener;
+
+    @FXML
+    void handleExitCatalog(ActionEvent event) {
+        System.exit(0);
+    }
+
+    @FXML
+    void handleHomeCatalog(MouseEvent mouseEvent) throws IOException {
+        App.setRoot("MainPage");
+    }
 
     private void getData() {
 
